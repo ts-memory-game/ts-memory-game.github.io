@@ -228,8 +228,8 @@ async function initializeEggs() {
     secondCard.removeEventListener('click', flipCard);
     
     setTimeout(() => {
-       firstCard.backgroundColor = '#ffffff';
-       secondCard.backgroundColor = '#ffffff';
+       firstCard.setAttribute('style', 'background-color:#ffffff !important');
+       secondCard.setAttribute('style', 'background-color:#ffffff !important');
     }, 3000);
 
     resetBoard();
