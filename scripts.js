@@ -226,11 +226,8 @@ async function initializeEggs() {
   function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    
-    setTimeout(() => {
-       firstCard.setAttribute('style', 'background-color:#ffffff !important');
-       secondCard.setAttribute('style', 'background-color:#ffffff !important');
-    }, 3000);
+    firstCard.setAttribute('style', 'background-color:#ffffff !important');
+    secondCard.setAttribute('style', 'background-color:#ffffff !important');
 
     resetBoard();
   }
