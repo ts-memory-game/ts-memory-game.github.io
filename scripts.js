@@ -1,8 +1,36 @@
 function shuffle() {
   let eggs = [
     {
-      title: 'PHP 200',
-      prize: '200'
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
+    },
+    {
+      title: 'PHP 100',
+      prize: '100'
     },
     {
       title: 'PHP 200',
@@ -33,8 +61,32 @@ function shuffle() {
       prize: '200'
     },
     {
-      title: 'PHP 300',
-      prize: '300'
+      title: 'PHP 200',
+      prize: '200'
+    },
+    {
+      title: 'PHP 200',
+      prize: '200'
+    },
+    {
+      title: 'PHP 200',
+      prize: '200'
+    },
+    {
+      title: 'PHP 250',
+      prize: '250'
+    },
+    {
+      title: 'PHP 250',
+      prize: '250'
+    },
+    {
+      title: 'PHP 250',
+      prize: '250'
+    },
+    {
+      title: 'PHP 250',
+      prize: '250'
     },
     {
       title: 'PHP 300',
@@ -53,18 +105,6 @@ function shuffle() {
       prize: '300'
     },
     {
-      title: 'PHP 300',
-      prize: '300'
-    },
-    {
-      title: 'PHP 300',
-      prize: '300'
-    },
-    {
-      title: 'PHP 300',
-      prize: '300'
-    },
-    {
       title: 'PHP 500',
       prize: '500'
     },
@@ -81,84 +121,44 @@ function shuffle() {
       prize: '500'
     },
     {
-      title: 'PHP 500',
-      prize: '500'
+      title: 'PHP 300 Shopee Voucher',
+      prize: 'voucher'
     },
     {
-      title: 'PHP 500',
-      prize: '500'
+      title: 'PHP 300 Shopee Voucher',
+      prize: 'voucher'
     },
     {
-      title: 'PHP 500',
-      prize: '500'
+      title: 'PHP 300 Shopee Voucher',
+      prize: 'voucher'
     },
     {
-      title: 'PHP 500',
-      prize: '500'
+      title: 'PHP 300 Shopee Voucher',
+      prize: 'voucher'
     },
     {
-      title: 'PHP 500',
-      prize: '500'
+      title: 'Egg Mug',
+      prize: 'egg-mug'
     },
     {
-      title: 'PHP 500',
-      prize: '500'
+      title: 'Egg Mug',
+      prize: 'egg-mug'
     },
     {
-      title: 'PHP 500 Shopee Voucher',
-      prize: 'shopee-voucher'
+      title: 'LED Clock',
+      prize: 'clock'
     },
     {
-      title: 'PHP 500 Shopee Voucher',
-      prize: 'shopee-voucher'
+      title: 'LED Clock',
+      prize: 'clock'
     },
     {
-      title: 'PHP 500 Shopee Voucher',
-      prize: 'shopee-voucher'
+      title: 'Ear- phones',
+      prize: 'earphones'
     },
     {
-      title: 'PHP 500 Shopee Voucher',
-      prize: 'shopee-voucher'
-    },
-    {
-      title: 'PHP 500 Lazada Voucher',
-      prize: 'lazada-voucher'
-    },
-    {
-      title: 'PHP 500 Lazada Voucher',
-      prize: 'lazada-voucher'
-    },
-    {
-      title: 'PHP 500 Lazada Voucher',
-      prize: 'lazada-voucher'
-    },
-    {
-      title: 'PHP 500 Lazada Voucher',
-      prize: 'lazada-voucher'
-    },
-    {
-      title: 'Shopee Item',
-      prize: 'shopee-item-1'
-    },
-    {
-      title: 'Shopee Item',
-      prize: 'shopee-item-1'
-    },
-    {
-      title: 'Shopee Item',
-      prize: 'shopee-item-2'
-    },
-    {
-      title: 'Shopee Item',
-      prize: 'shopee-item-2'
-    },
-    {
-      title: 'Shopee Item',
-      prize: 'shopee-item-3'
-    },
-    {
-      title: 'Shopee Item',
-      prize: 'shopee-item-3'
+      title: 'Ear- phones',
+      prize: 'earphones'
     },
     {
       title: 'Bokya!',
@@ -185,11 +185,11 @@ function shuffle() {
       prize: 'nothing'
     },
     {
-      title: 'Gotcha!',
-      prize: 'gotcha'
+      title: 'This one is empty!',
+      prize: 'This one is empty'
     },
     {
-      title: 'Gotcha!',
+      title: 'This one is empty!',
       prize: 'gotcha'
     },
     {
@@ -211,7 +211,7 @@ function setEggs(shuffledEggs) {
       'beforeend',
       `<div class="memory-card" data-prize="${egg.prize}">
           <h3 class="front-face" style="text-align: center;">${egg.title}</h3> 
-          <div class="back-face" style="text-align:center">
+          <div class="back-face" style="text-align:center;">
               <img src="img/egg-1.png" alt="Memory Card" style="width: 100%;">
               <h1>${index + 1}</h1>
           </div>
@@ -264,10 +264,15 @@ async function initializeEggs() {
   }
 
   function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+    setTimeout(() => {
+      firstCard.classList.add('match');
+      secondCard.classList.add('match');
 
-    resetBoard();
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+
+      resetBoard();
+    }, 3000)
   }
 
   function unflipCards() {
@@ -286,5 +291,20 @@ async function initializeEggs() {
     [firstCard, secondCard] = [null, null];
   }
 
+
   cards.forEach(card => card.addEventListener('click', flipCard));
+}
+
+async function reflipCards() {
+  const cards = document.querySelectorAll('.memory-card');
+
+  cards.forEach((card) => {
+    card.classList.add('flip')
+  })
+
+  await setTimeout(() => {
+    cards.forEach((card) => {
+      card.classList.remove('flip')
+    })
+  }, 1500);
 }
