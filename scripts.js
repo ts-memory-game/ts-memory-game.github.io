@@ -169,14 +169,6 @@ function shuffle() {
       prize: 'bokya'
     },
     {
-      title: 'Bokya!',
-      prize: 'bokya'
-    },
-    {
-      title: 'Bokya!',
-      prize: 'bokya'
-    },
-    {
       title: 'Try again!',
       prize: 'try-again'
     },
