@@ -160,6 +160,54 @@ function shuffle() {
       title: 'Shopee Item',
       prize: 'shopee-item-3'
     },
+    {
+      title: 'Bokya!',
+      prize: 'bokya'
+    },
+    {
+      title: 'Bokya!',
+      prize: 'bokya'
+    },
+    {
+      title: 'Bokya!',
+      prize: 'bokya'
+    },
+    {
+      title: 'Bokya!',
+      prize: 'bokya'
+    },
+    {
+      title: 'Try again!',
+      prize: 'try-again'
+    },
+    {
+      title: 'Try again!',
+      prize: 'try-again'
+    },
+    {
+      title: 'Nothing in here!',
+      prize: 'nothing'
+    },
+    {
+      title: 'Nothing in here!',
+      prize: 'nothing'
+    },
+    {
+      title: 'Gotcha!',
+      prize: 'gotcha'
+    },
+    {
+      title: 'Gotcha!',
+      prize: 'gotcha'
+    },
+    {
+      title: 'We are sorry!',
+      prize: 'sorry'
+    },
+    {
+      title: 'We are sorry!',
+      prize: 'sorry'
+    },
   ]
 
   return eggs.sort(() => Math.random() - 0.5);
@@ -226,8 +274,6 @@ async function initializeEggs() {
   function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    firstCard.setAttribute('style', 'background-color:#ffffff !important');
-    secondCard.setAttribute('style', 'background-color:#ffffff !important');
 
     resetBoard();
   }
