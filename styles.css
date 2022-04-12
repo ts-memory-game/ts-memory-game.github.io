@@ -5,24 +5,44 @@
 }
 
 body {
-    height: 100vh;
-    display: flex;
+    min-height: 100vh;
+    height: 100%;
     background: #ffffff;
-    color: #ffffff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   h1 {
     font-size: 40px;
   }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #78A2CC;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .text-center {
+    text-align: center;
+  }
   
   .memory-game {
-    width: 1200px;
+    width: 1100px;
     height: 600px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
+    color: #ffffff;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 
   .memory-card {
@@ -62,3 +82,16 @@ body {
 .front-face {
     transform: rotateY(180deg);
   }
+
+  .memory-card.match .front-face,
+  .memory-card.match .back-face {
+  background: #ffffff !important;
+}
+
+.memory-card.match .back-face img {
+  display: none;
+}
+
+.memory-card.match {
+  box-shadow: none !important;
+}
